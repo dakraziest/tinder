@@ -1,4 +1,5 @@
-from tinder.tinder import Tinder 
+from tinder.tinder import Tinder
+from tinder.user import User
 
 import unittest
 import config
@@ -18,8 +19,8 @@ class TestTinder(unittest.TestCase):
 		response = self._api.recs()
 		if 'results' in response:
 			users = response['results']
-			for u in users:
-				print u
+			for user in users:
+				print unicode(User(user))
 
 
 if __name__ == '__main__':
