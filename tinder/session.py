@@ -27,6 +27,9 @@ class Session(object):
 	def delete(self, user_id):
 		return self._api._request('DELETE', 'user/matches/' + user_id)
 
+	def message(self, user_id, body):
+		return self._api.message(user_id, body)
+
 	def update_location(self, lat, lon):
 		return self._api.ping(lat, lon)
 
