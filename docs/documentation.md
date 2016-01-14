@@ -13,7 +13,10 @@ session.recommendations() #an array of User to like or nope
 The user class has the following properties:
 
  * id
+ * name
  * bio
+ * messages
+ * age
  * *more coming soon*
 
 ```python
