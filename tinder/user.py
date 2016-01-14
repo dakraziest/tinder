@@ -22,3 +22,8 @@ class User(object):
 			name=self.data['name'],
 			distance=self.data['distance_mi'],
 		)
+
+	def __str__(self):
+		return unicode(self)
+
+		

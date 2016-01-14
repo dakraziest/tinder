@@ -5,7 +5,7 @@ import threading
 from . import constants
 from . import errors
 
-class Tinder(object):
+class TinderAPI(object):
 	def __init__(self):
 		self._session = requests.Session()
 		self._session.headers.update(constants.HEADERS)
@@ -70,7 +70,7 @@ class Tinder(object):
 	def like(self, user):
 		return self._get("/like/{}".format(user))
 
-	def dislike(self, user):
+	def nope(self, user):
 		return self._get("/pass/{}".format(user))
 
 	def message(self, user, body):

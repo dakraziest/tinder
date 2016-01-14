@@ -1,4 +1,4 @@
-from tinder.tinder import Tinder
+from tinder.api import TinderAPI
 from tinder.user import User
 
 import unittest
@@ -6,7 +6,7 @@ import config
 
 class TestTinder(unittest.TestCase):
 	def setUp(self):
-		self._api = Tinder()
+		self._api = TinderAPI()
 		
 		self._api.auth(config.FACEBOOK_TOKEN, config.FACEBOOK_ID)
 		
@@ -20,7 +20,7 @@ class TestTinder(unittest.TestCase):
 		if 'results' in response:
 			users = response['results']
 			for user in users:
-				print unicode(User(user))
+				print User(user)
 
 
 if __name__ == '__main__':
