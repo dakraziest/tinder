@@ -8,6 +8,7 @@ Ideas used from [pynder](https://github.com/charliewolf/pynder/) and [this](http
 ##Installation
 1. Clone the repository: `git clone https://github.com/tomkoker/tinder.git`
 2. Install the library: `python tinder/setup.py install`
+    * To remove simply run `pip uninstall tinder`
 
 ##Use
 #####Getting Your ID and Token
