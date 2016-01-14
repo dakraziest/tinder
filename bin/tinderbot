@@ -7,4 +7,5 @@ bot = tinder.Session(config.FACEBOOK_TOKEN, config.FACEBOOK_ID)
 
 for user in bot.recommendations():
 	bot.like(user.id)
+	
 
