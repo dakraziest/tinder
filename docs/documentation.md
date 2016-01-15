@@ -38,5 +38,10 @@ session.update_location(latitude, longitude)
 
 #update bio
 session.update_bio(bio)
+
+#get profile information
+print session.profile #prints profile, kinda ugly
+print session.profile['bio'] #prints bio
+print session.profile['pos_info']['city']['name'] #prints name of current city
 ```
 
