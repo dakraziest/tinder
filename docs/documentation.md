@@ -3,12 +3,12 @@
 ```python
 import tinder
 
-#create new session
-session = tinder.Session(facebook_id, facebook_token)
+#create new bot
+bot = tinder.Bot(facebook_id, facebook_token)
 
-session.matches() #an array of User that you have matched with
+bot.matches() #an array of User that you have matched with
 
-session.recommendations() #an array of User to like or nope
+bot.recommendations() #an array of User to like or nope
 ```
 The user class has the following properties:
 
@@ -22,26 +22,26 @@ The user class has the following properties:
 ```python
 
 #like a user
-session.like(user_id)
+bot.like(user_id)
 
 #nope a user
-session.nope(user_id)
+bot.nope(user_id)
 
 #message a user
-session.message(user_id, body)
+bot.message(user_id, body)
 
 #unmatch a user
-session.delete(user_id)
+bot.delete(user_id)
 
 #update location 
-session.update_location(latitude, longitude)
+bot.update_location(latitude, longitude)
 
 #update bio
-session.update_bio(bio)
+bot.update_bio(bio)
 
 #get profile information
-print session.profile #prints profile, kinda ugly
-print session.profile['bio'] #prints bio
-print session.profile['pos_info']['city']['name'] #prints name of current city
+print bot.profile #prints profile, kinda ugly
+print bot.profile['bio'] #prints bio
+print bot.profile['pos_info']['city']['name'] #prints name of current city
 ```
 

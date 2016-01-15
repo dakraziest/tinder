@@ -1,1 +1,1 @@
-from .session import Session
+from .bot import Bot

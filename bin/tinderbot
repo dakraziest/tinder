@@ -3,7 +3,7 @@
 import tinder
 import config
 
-bot = tinder.Session(config.FACEBOOK_TOKEN, config.FACEBOOK_ID)
+bot = tinder.Bot(config.FACEBOOK_TOKEN, config.FACEBOOK_ID)
 
 print "setting location..."
 bot.update_location(40.730610,-73.935242)
