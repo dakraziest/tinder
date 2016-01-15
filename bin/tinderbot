@@ -5,7 +5,17 @@ import config
 
 bot = tinder.Session(config.FACEBOOK_TOKEN, config.FACEBOOK_ID)
 
-for user in bot.recommendations():
-	bot.like(user.id)
+print "setting location..."
+bot.update_location(40.730610,-73.935242)
+print "location appears to be..."
+print bot.profile['pos_info']['city']['name'] + ', ' + bot.profile['pos_info']['state']['name']
+
+print '\n'
+
+print "setting bio..."
+bot.update_bio('Hello, World')
+print "bio appears to be..."
+print bot.profile['bio']
+
 	
 
